@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.env/
+*.zip
+*.7z
+*.rar
+*.iso
+*.nes
+*.gba
+*.nds
+*.sfc
+*.smc
+*.z64

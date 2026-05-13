@@ -1,0 +1,191 @@
+/* ROMView - Dark Gaming Premium Theme */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+
+QMainWindow, QWidget {
+    background-color: #0d0d14;
+    color: #e0e0f0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 13px;
+}
+
+/* Sidebar */
+#sidebar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #12121f, stop:1 #0a0a15);
+    border-right: 1px solid #1e1e3a;
+    min-width: 210px;
+    max-width: 210px;
+}
+
+#sidebar_title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #a855f7;
+    padding: 20px 16px 8px 16px;
+    letter-spacing: 2px;
+}
+
+#sidebar_sub {
+    color: #555577;
+    font-size: 10px;
+    padding: 0 16px 16px 16px;
+    letter-spacing: 1px;
+}
+
+/* Console list */
+QListWidget {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    outline: none;
+}
+QListWidget::item {
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #9090b8;
+    font-size: 12px;
+    margin: 1px 4px;
+}
+QListWidget::item:hover {
+    background: rgba(168, 85, 247, 0.12);
+    color: #c084fc;
+}
+QListWidget::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(168,85,247,0.3), stop:1 rgba(139,92,246,0.1));
+    color: #e879f9;
+    border-left: 3px solid #a855f7;
+}
+
+/* Search bar */
+#search_bar {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #2a2a4a;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #e0e0f0;
+    margin: 12px;
+}
+#search_bar:focus {
+    border-color: #a855f7;
+    background: rgba(168,85,247,0.08);
+}
+
+/* Search button */
+#search_btn {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #7c3aed, stop:1 #a855f7);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 13px;
+    margin-right: 12px;
+}
+#search_btn:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8b5cf6, stop:1 #c084fc);
+}
+#search_btn:pressed { padding: 11px 18px 9px 22px; }
+
+/* Content area */
+#content_area {
+    background: transparent;
+}
+
+/* ROM Cards */
+#rom_card {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #16162a, stop:1 #111120);
+    border: 1px solid #1e1e3a;
+    border-radius: 14px;
+    padding: 0px;
+}
+#rom_card:hover {
+    border-color: #7c3aed;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1e1e38, stop:1 #16162a);
+}
+
+/* Download button on card */
+#download_btn {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #7c3aed, stop:1 #a855f7);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+#download_btn:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8b5cf6, stop:1 #c084fc);
+}
+
+/* Progress bar */
+QProgressBar {
+    background: #1a1a2e;
+    border: none;
+    border-radius: 5px;
+    height: 6px;
+    text-align: center;
+    font-size: 10px;
+    color: transparent;
+}
+QProgressBar::chunk {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #7c3aed, stop:1 #ec4899);
+    border-radius: 5px;
+}
+
+/* Scroll area */
+QScrollArea { border: none; background: transparent; }
+QScrollBar:vertical {
+    background: #0d0d14; width: 6px; border-radius: 3px;
+}
+QScrollBar::handle:vertical {
+    background: #3a3a6a; border-radius: 3px; min-height: 30px;
+}
+QScrollBar::handle:vertical:hover { background: #7c3aed; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0px; }
+
+/* Status bar */
+#status_bar {
+    background: #080810;
+    border-top: 1px solid #1a1a2e;
+    color: #555577;
+    padding: 6px 16px;
+    font-size: 11px;
+}
+
+/* Console label on card */
+#console_tag {
+    background: rgba(168,85,247,0.2);
+    color: #c084fc;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+QLabel { color: #e0e0f0; }
+QMessageBox { background: #12121f; }
+
+QComboBox {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    padding: 6px 12px;
+    color: #e0e0f0;
+    min-width: 140px;
+}
+QComboBox:hover { border-color: #7c3aed; }
+QComboBox::drop-down { border: none; width: 20px; }
+QComboBox QAbstractItemView {
+    background: #12121f;
+    border: 1px solid #2a2a4a;
+    selection-background-color: #7c3aed;
+}
